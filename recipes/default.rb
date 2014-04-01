@@ -9,4 +9,6 @@
 
 
 include_recipe 'tippfuchs::database'
-include_recipe 'tippfuchs::webserver'
+include_recipe 'tippfuchs::cache'
+include_recipe 'tippfuchs::web'
+include_recipe 'tippfuchs::rails_app'
