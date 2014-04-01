@@ -22,18 +22,13 @@ Vagrant.configure("2") do |config|
       },
       :tz => 'UTC',
       :postgresql => {
-        #:version => '9.3',
-        #:config => {
-        #  :ssl_key_file =>  '/etc/ssl/private/ssl-cert-snakeoil.key',
-        #  :ssl_cert_file => '/etc/ssl/certs/ssl-cert-snakeoil.pem'
-        #},
         :password => {
           :postgres => 'md53175bce1d3201d16594cebf9d7eb3f9d' # postgres
         }
       }
     }
     chef.run_list = [
-      "recipe[chef-solo-search::default]",
+      #"recipe[chef-solo-search::default]",
       "recipe[tippfuchs::default]"
     ]
   end

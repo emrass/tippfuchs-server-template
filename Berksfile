@@ -20,7 +20,6 @@ cookbook 'vim',                  '~> 1.1.0'
 # Database
 
 cookbook 'tippfuchs-postgresql', '~> 1.0.0', github: 'blackbird07/tippfuchs-postgresql'
-cookbook 'database',             '~> 2.0.0'
 
 # Webserver
 
@@ -30,4 +29,4 @@ cookbook 'tippfuchs-nginx',      '~> 1.0.0', github: 'blackbird07/tippfuchs-ngin
 
 cookbook 'nodejs',               '~> 1.3.0'
 cookbook 'imagemagick',          '~> 0.2.0'
-depends 'tippfuchs-rails',       '~> 0.1.0', github: 'blackbird07/tippfuchs-rails'
+cookbook 'tippfuchs-rails',      '~> 0.1.0', github: 'blackbird07/tippfuchs-rails'
