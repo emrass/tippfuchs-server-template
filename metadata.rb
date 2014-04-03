@@ -4,7 +4,7 @@ maintainer_email 'enrico.mrass@gmail.com'
 license          'Proprietary - All Rights Reserved'
 description      'Installs/Configures tippfuchs'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.4.2'
+version          '0.4.3'
 
 recipe 'tippfuchs::_common_system', 'For internal use only - the base server'
 recipe 'tippfuchs::database',       'Postgres database server'
@@ -22,7 +22,9 @@ depends 'openssl'
 depends 'locale'
 depends 'timezone-ii'
 
+depends 'git'
 depends 'vim'
+depends 'curl'
 
 # Database
 
@@ -35,6 +37,5 @@ depends 'tippfuchs-nginx'
 
 
 # Rails App Server
-depends 'nodejs'
 depends 'imagemagick'
 depends 'tippfuchs-rails'

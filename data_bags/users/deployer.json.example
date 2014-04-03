@@ -1,0 +1,10 @@
+{
+  "id": "deployer",
+  // generate this with: openssl passwd -1 "plaintextpassword"
+  "password": "$1$kKBs2M4Z$6J2HT9.Ru1uwRDF094pN81", // "deployer"
+  "ssh_keys": [
+    "ssh-rsa AAA123...xyz== foo"
+  ],
+  "groups": [ "sysadmin" ],
+  "shell": "\/bin\/bash"
+}

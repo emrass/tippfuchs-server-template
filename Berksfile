@@ -15,7 +15,9 @@ cookbook 'openssl',              '~> 1.1.0'
 cookbook 'locale',               '~> 1.0.0',  github: 'hw-cookbooks/locale'
 cookbook 'timezone-ii',          '~> 0.2.0'
 
+cookbook 'git',                  '~> 4.0.0'
 cookbook 'vim',                  '~> 1.1.0'
+cookbook 'curl',                 '~> 1.1.0'
 
 # Database
 
@@ -27,6 +29,7 @@ cookbook 'tippfuchs-nginx',      '~> 1.0.0', github: 'blackbird07/tippfuchs-ngin
 
 # Rails App Server
 
-cookbook 'nodejs',               '~> 1.3.0'
 cookbook 'imagemagick',          '~> 0.2.0'
-cookbook 'tippfuchs-rails',      '~> 0.1.0', github: 'blackbird07/tippfuchs-rails'
+cookbook 'tippfuchs-rails',      '~> 0.2.0', github: 'blackbird07/tippfuchs-rails'
+# Issue in Berkshelf < 3.0 -> need to add cookbook here -> TODO: remove when fixed in Berkshelf
+cookbook 'rbenv',                '~> 0.7.0', github: 'fnichol/chef-rbenv'

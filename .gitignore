@@ -21,4 +21,4 @@ bin/*
 
 config.json
 
-data_bags/users/*.json
+data_bags/**/*.json
