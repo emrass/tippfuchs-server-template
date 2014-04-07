@@ -1,4 +1,38 @@
-# tippfuchs cookbook
+# Tippfuchs Server Template
+
+Chef server template for provisioning the whole stack for Tippfuchs.de, including
+
+ - database server using Postgresql
+ - cache server using Redis.io [TODO]
+ - Webserver using Nginx
+ - Ruby using Rbenv
+
+## Provision Vagrant using Chef-Solo
+
+Install the required vagrant plugins:
+```
+vagrant plugin install vagrant-berkshelf
+vagrant plugin install vagrant-omnibus
+```
+
+Adjust the settings in the `Vagrantfile`. Now run
+```
+vagrant up [--provision]
+```
+
+In order to (re-)provision a running virtual machine, type `vagrant provision`.
+
+## Provision Vagrant using Chef-Server
+```
+vagrant up --no-provision
+bundle exec knife bootstrap <vm ip> --sudo -x vagrant -P vagrant -N "nodename" -r "recipe[tippfuchs::default]"
+```
+Replace `<vm ip>` with the actual ip of the VM as set in the `Vagrantfile`, e.g. `192.168.2.10`.
+
+To reprovision, SSH into the virtual machine and run (as root) `chef-client`.
+
+
+
 
 # Requirements
 
