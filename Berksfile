@@ -21,15 +21,15 @@ cookbook 'curl',                 '~> 1.1.0'
 
 # Database
 
-cookbook 'tippfuchs-postgresql', '~> 1.0.0', github: 'blackbird07/tippfuchs-postgresql'
+cookbook 'tippfuchs-postgresql', '~> 1.0.0', github: 'emrass/tippfuchs-postgresql'
 
 # Webserver
 
-cookbook 'tippfuchs-nginx',      '~> 1.0.0', github: 'blackbird07/tippfuchs-nginx'
+cookbook 'tippfuchs-nginx',      '~> 1.0.0', github: 'emrass/tippfuchs-nginx'
 
 # Rails App Server
 
 cookbook 'imagemagick',          '~> 0.2.0'
-cookbook 'tippfuchs-rails',      '~> 0.2.0', github: 'blackbird07/tippfuchs-rails'
+cookbook 'tippfuchs-rails',      '~> 0.2.0', github: 'emrass/tippfuchs-rails'
 # Issue in Berkshelf < 3.0 -> need to add cookbook here -> TODO: remove when fixed in Berkshelf
 cookbook 'rbenv',                '~> 0.7.0', github: 'fnichol/chef-rbenv'

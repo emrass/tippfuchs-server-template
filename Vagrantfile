@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
     }
     chef.run_list = [
       #"recipe[chef-solo-search::default]",
-      "recipe[tippfuchs::rails_app]"
+      "recipe[tippfuchs::default]"
     ]
   end
 end
