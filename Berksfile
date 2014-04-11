@@ -15,6 +15,8 @@ cookbook 'openssl',              '~> 1.1.0'
 cookbook 'locale',               '~> 1.0.0',  github: 'hw-cookbooks/locale'
 cookbook 'timezone-ii',          '~> 0.2.0'
 
+cookbook 'tippfuchs-fail2ban',   '~> 0.1.0'
+
 cookbook 'git',                  '~> 4.0.0'
 cookbook 'vim',                  '~> 1.1.0'
 cookbook 'curl',                 '~> 1.1.0'

@@ -6,6 +6,9 @@ include_recipe 'openssl'         # needed for secure passwords
 include_recipe 'locale'
 include_recipe 'timezone-ii'
 
+# security
+include_recipe 'tippfuchs-fail2ban'
+
 # tools
 include_recipe 'git'
 include_recipe 'vim'
