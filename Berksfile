@@ -12,10 +12,11 @@ cookbook 'apt',                  '~> 2.3.0'
 cookbook 'build-essential',      '~> 2.0.0'
 cookbook 'openssl',              '~> 1.1.0'
 
-cookbook 'locale',               '~> 1.0.0',  github: 'hw-cookbooks/locale'
+cookbook 'locale',               '~> 1.0.0', github: 'hw-cookbooks/locale'
 cookbook 'timezone-ii',          '~> 0.2.0'
 
-cookbook 'tippfuchs-fail2ban',   '~> 0.1.0'
+cookbook 'fail2ban',             '~> 2.1.0', github: 'emrass/fail2ban', branch: 'jail_def' # TODO: dependency cookbook - remove with berkshelf 3.0
+cookbook 'tippfuchs-fail2ban',   '~> 0.1.0', github: 'emrass/tippfuchs-fail2ban'
 
 cookbook 'git',                  '~> 4.0.0'
 cookbook 'vim',                  '~> 1.1.0'

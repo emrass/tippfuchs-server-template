@@ -9,6 +9,14 @@ include_recipe 'timezone-ii'
 # security
 include_recipe 'tippfuchs-fail2ban'
 
+fail2ban_jail 'ssh' do
+  jail :enabled  => 'true',
+       :port     => 'ssh',
+       :filter   => 'sshd',
+       :logpath  => node['fail2ban']['auth_log'],
+       :maxretry => '6'
+end
+
 # tools
 include_recipe 'git'
 include_recipe 'vim'
@@ -27,7 +35,6 @@ package 'curl'
 #  action   :allow
 #end
 #
-#include_recipe 'fail2ban'
 #include_recipe 'tippfuchs-openssh'
 
 
