@@ -9,7 +9,10 @@ cookbook 'chef-solo-search'
 # Berkshelf is not able to dissolve this transient dependencies,
 # so we need to explicitly declare them.
 
+cookbook 'nginx',                '~> 2.6.2'                                                # defined in tippfuchs-nginx
+cookbook 'openssh',              '~> 1.3.0'                                                # defined in tippfuchs-openssh
 cookbook 'fail2ban',             '~> 2.1.0', github: 'emrass/fail2ban', branch: 'jail_def' # defined in tippfuchs-fail2ban: remove when merged into main repo
+cookbook 'postgresql',           '~> 3.3.0'                                                # defined in tippfuchs-postgresql
 cookbook 'rbenv',                '~> 0.7.0', github: 'fnichol/chef-rbenv'                  # defined in tippfuchs-rails
 
 # General Dependencies (Common System)
