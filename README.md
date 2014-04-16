@@ -50,26 +50,44 @@ Edit ./.chef/knife.rb and update paths.
 
 # Usage
 
+## Vagrant using Chef-Solo
+
 Spin up vagrant:
-  vagrant up
+```
+vagrant up [--provision]
+```
+
+## EC2 using Chef Server
 
 Spin up a server on EC2:
 
-  bundle exec knife ec2 server create \
-    --availability-zone eu-west-1a \
-    --node-name tippfuchs.sandbox \
-    --flavor t1.micro \
-    --image ami-808675f7 \
-    --identity-file ~/.ssh/aws_tippfuchs.pem \
-    --run-list "recipe[tippfuchs::default]" \
-    --ssh-user ubuntu \
-    --groups web_access
+```
+bundle exec knife ec2 server create \
+  --availability-zone eu-west-1a \
+  --node-name tippfuchs.sandbox \
+  --flavor t1.micro \
+  --image ami-808675f7 \
+  --identity-file ~/.ssh/aws_tippfuchs.pem \
+  --run-list "recipe[tippfuchs::default]" \
+  --ssh-user ubuntu \
+  --groups web_access
+```
 
 Show running servers:
-  bundle exec knife ec2 server list
+```
+bundle exec knife ec2 server list
+```
   
 Delete running server:
-  bundle exec knife ec2 server delete i-<id>
+```
+bundle exec knife ec2 server delete i-<id>
+```
+
+## test-kitchen
+
+```
+kitchen converge
+```
 
 # Attributes
 

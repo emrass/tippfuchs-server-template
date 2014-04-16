@@ -6,11 +6,22 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: ubuntu-12.04
-  - name: centos-6.4
+- name: ubuntu-12.04
+  driver_config:
+    box: ubuntu1204
+    box_url: "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04-i386_provisionerless.box"
+    network:
+    - ["private_network", {ip: "192.168.2.10"}]
 
 suites:
-  - name: default
-    run_list:
-      - recipe[tippfuchs::default]
-    attributes:
+- name: default
+  run_list: 
+    - recipe[tippfuchs::default]
+  attributes:
+    locale:
+      lang: en_US.utf8
+      lc_all: en_US.utf8
+    tz: UTC
+    postgresql:
+      password:
+        postgres: md53175bce1d3201d16594cebf9d7eb3f9d

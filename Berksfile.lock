@@ -1,0 +1,112 @@
+DEPENDENCIES
+  apt (~> 2.3.0)
+  build-essential (~> 2.0.0)
+  chef-solo-search
+  curl (~> 1.1.0)
+  fail2ban
+    git: git://github.com/emrass/fail2ban.git
+    revision: 6c2bb0261c524e1330baaf77b8387e9f215d6044
+    branch: jail_def
+  git (~> 4.0.0)
+  imagemagick (~> 0.2.0)
+  locale
+    git: git://github.com/hw-cookbooks/locale.git
+    revision: aa46ee2b7f810378a99f3244b48c51e2c814a43f
+  openssl (~> 1.1.0)
+  rbenv
+    git: git://github.com/fnichol/chef-rbenv.git
+    revision: 0a3018634bafe58ad21c6ee271af015220e444b9
+  timezone-ii (~> 0.2.0)
+  tippfuchs
+    path: .
+    metadata: true
+  tippfuchs-fail2ban
+    git: git://github.com/emrass/tippfuchs-fail2ban.git
+    revision: 7fab7143ba48c21e37a131752cb51fc5d6f3e9dd
+  tippfuchs-nginx
+    git: git://github.com/emrass/tippfuchs-nginx.git
+    revision: f57da301b8ff68ff9c5e73690f79280798cedc34
+  tippfuchs-postgresql
+    git: git://github.com/emrass/tippfuchs-postgresql.git
+    revision: 8d7970fa2291f6237fad0b022df7014cefe05a74
+  tippfuchs-rails
+    git: git://github.com/emrass/tippfuchs-rails.git
+    revision: 156df67adb3500fbfcedfb1d9c5d9bf90a7b82dd
+  vim (~> 1.1.0)
+
+GRAPH
+  apt (2.3.8)
+  build-essential (2.0.0)
+  chef-solo-search (0.5.1)
+  chef_handler (1.1.6)
+  curl (1.1.0)
+  dmg (2.2.0)
+  fail2ban (2.1.3)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  git (4.0.0)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    runit (>= 1.0.0)
+    windows (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  imagemagick (0.2.3)
+  java (1.22.0)
+  locale (1.0.1)
+  nginx (1.8.0)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    ohai (>= 1.1.4)
+    runit (>= 0.0.0)
+    yum (>= 0.0.0)
+  nodejs (1.3.0)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    yum (>= 0.0.0)
+  ohai (2.0.0)
+  openssl (1.1.0)
+  postgresql (3.3.4)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    openssl (>= 0.0.0)
+  rbenv (0.7.3)
+    java (> 1.4.0)
+    ruby_build (>= 0.0.0)
+  ruby_build (0.8.0)
+  runit (1.5.10)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  timezone-ii (0.2.0)
+  tippfuchs (0.4.7)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    curl (>= 0.0.0)
+    git (>= 0.0.0)
+    imagemagick (>= 0.0.0)
+    locale (>= 0.0.0)
+    openssl (>= 0.0.0)
+    timezone-ii (>= 0.0.0)
+    tippfuchs-fail2ban (>= 0.0.0)
+    tippfuchs-nginx (>= 0.0.0)
+    tippfuchs-postgresql (>= 0.0.0)
+    tippfuchs-rails (>= 0.0.0)
+    vim (>= 0.0.0)
+  tippfuchs-fail2ban (0.1.6)
+    fail2ban (>= 0.0.0)
+  tippfuchs-nginx (1.0.9)
+    nginx (>= 0.0.0)
+    tippfuchs-fail2ban (>= 0.0.0)
+  tippfuchs-postgresql (1.0.4)
+    postgresql (>= 0.0.0)
+  tippfuchs-rails (0.2.4)
+    nodejs (>= 0.0.0)
+    rbenv (>= 0.0.0)
+    ruby_build (>= 0.0.0)
+  vim (1.1.2)
+  windows (1.30.2)
+    chef_handler (>= 0.0.0)
+  yum (3.2.0)
+  yum-epel (0.3.6)
+    yum (~> 3.0)

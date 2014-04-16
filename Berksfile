@@ -1,10 +1,16 @@
-#source 'http://api.berkshelf.com'
-site :opscode
+source 'http://api.berkshelf.com'
 
 metadata
 
 # Dependency to make data bag search work with chef solo
 cookbook 'chef-solo-search'
+
+# Dependency Cookbooks (i.e. defined in sub-/wrapper cookbooks)
+# Berkshelf is not able to dissolve this transient dependencies,
+# so we need to explicitly declare them.
+
+cookbook 'fail2ban',             '~> 2.1.0', github: 'emrass/fail2ban', branch: 'jail_def' # defined in tippfuchs-fail2ban: remove when merged into main repo
+cookbook 'rbenv',                '~> 0.7.0', github: 'fnichol/chef-rbenv'                  # defined in tippfuchs-rails
 
 # General Dependencies (Common System)
 
@@ -12,10 +18,9 @@ cookbook 'apt',                  '~> 2.3.0'
 cookbook 'build-essential',      '~> 2.0.0'
 cookbook 'openssl',              '~> 1.1.0'
 
-cookbook 'locale',               '~> 1.0.0', github: 'hw-cookbooks/locale'
+cookbook 'locale',               '~> 1.0.1', github: 'hw-cookbooks/locale'
 cookbook 'timezone-ii',          '~> 0.2.0'
 
-cookbook 'fail2ban',             '~> 2.1.0', github: 'emrass/fail2ban', branch: 'jail_def' # TODO: dependency cookbook - remove with berkshelf 3.0
 cookbook 'tippfuchs-fail2ban',   '~> 0.1.0', github: 'emrass/tippfuchs-fail2ban'
 
 cookbook 'git',                  '~> 4.0.0'
@@ -34,5 +39,3 @@ cookbook 'tippfuchs-nginx',      '~> 1.0.0', github: 'emrass/tippfuchs-nginx'
 
 cookbook 'imagemagick',          '~> 0.2.0'
 cookbook 'tippfuchs-rails',      '~> 0.2.0', github: 'emrass/tippfuchs-rails'
-# Issue in Berkshelf < 3.0 -> need to add cookbook here -> TODO: remove when fixed in Berkshelf
-cookbook 'rbenv',                '~> 0.7.0', github: 'fnichol/chef-rbenv'
