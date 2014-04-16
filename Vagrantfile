@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :private_network, ip: "192.168.2.10"
   config.vm.boot_timeout   = 120
   config.berkshelf.enabled = true
-  config.omnibus.version   = :latest
+  config.omnibus.chef_version = :latest
 
   config.vm.provision :chef_solo do |chef|
     chef.json = {
