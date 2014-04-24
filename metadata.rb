@@ -24,6 +24,9 @@ depends 'timezone-ii',         '~> 0.2.0'
 
 depends 'tippfuchs-fail2ban'
 
+depends 'users',               '~> 1.7.0'
+depends 'sudo',                '~> 2.5.2'
+
 depends 'git',                 '~> 4.0.0'
 depends 'vim',                 '~> 1.1.0'
 depends 'curl',                '~> 1.1.0'

@@ -7,7 +7,7 @@
 Vagrant.configure("2") do |config|
   config.vm.hostname = "tippfuchs-berkshelf"
   config.vm.box = "ubuntu1204"
-  # config.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04-i386_provisionerless.box"
+  # config.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box"
   
   config.vm.network :private_network, ip: "192.168.2.10"
   config.vm.boot_timeout   = 120
@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
       }
     }
     chef.run_list = [
-      #"recipe[chef-solo-search::default]",
+      "recipe[chef-solo-search::default]",
       "recipe[tippfuchs::default]"
     ]
   end

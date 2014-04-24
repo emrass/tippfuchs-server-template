@@ -17,11 +17,23 @@ fail2ban_jail 'ssh' do
        :maxretry => '6'
 end
 
+
+# users
+
+# Searches data bag "users" for groups attribute "sysadmin" and
+# places returned users in Unix group "sysadmin"
+include_recipe 'users::sysadmins'
+# Make sysamdin a sudo group
+include_recipe 'sudo'
+
+
 # tools
 include_recipe 'git'
 include_recipe 'vim'
 package 'htop'
 package 'curl'
+
+
 
 
 # Prepared:

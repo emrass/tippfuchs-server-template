@@ -6,12 +6,18 @@ provisioner:
   name: chef_solo
 
 platforms:
+- name: ubuntu-14.04
+  driver_config:
+    box: ubuntu1404
+    box_url: "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box"
+    network:
+    - ["private_network", {ip: "192.168.2.10"}]
 - name: ubuntu-12.04
   driver_config:
     box: ubuntu1204
     box_url: "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04-i386_provisionerless.box"
     network:
-    - ["private_network", {ip: "192.168.2.10"}]
+    - ["private_network", {ip: "192.168.2.11"}]
 
 suites:
 - name: default
