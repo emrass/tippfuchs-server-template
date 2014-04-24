@@ -4,7 +4,7 @@ maintainer_email 'enrico.mrass@gmail.com'
 license          'Proprietary - All Rights Reserved'
 description      'Installs/Configures tippfuchs'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.5.1'
+version          '0.5.3'
 
 recipe 'tippfuchs::_common_system', 'For internal use only - the base server'
 recipe 'tippfuchs::database',       'Postgres database server'
@@ -22,7 +22,9 @@ depends 'openssl',             '~> 1.1.0'
 depends 'locale'
 depends 'timezone-ii',         '~> 0.2.0'
 
+depends 'tippfuchs-openssh'
 depends 'tippfuchs-fail2ban'
+depends 'firewall',            '~> 0.11.6'
 
 depends 'users',               '~> 1.7.0'
 depends 'sudo',                '~> 2.5.2'

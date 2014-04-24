@@ -15,7 +15,15 @@ Vagrant.configure("2") do |config|
   config.omnibus.chef_version = :latest
 
   config.vm.provision :chef_solo do |chef|
+    chef.data_bags_path = [ "data_bags" ]
+    
     chef.json = {
+      authorization: {
+        sudo: {
+          users: [ "deployer", "vagrant" ],
+          passwordless: true
+        }
+      },
       :locale => {
         :lang   => 'en_US.utf8',
         :lc_all => 'en_US.utf8',

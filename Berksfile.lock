@@ -19,15 +19,18 @@ DEPENDENCIES
   tippfuchs-nginx
     git: git://github.com/emrass/tippfuchs-nginx.git
     revision: 34f9125e59c180fc5c83988a9d725d43dfef523a
+  tippfuchs-openssh
+    git: git://github.com/emrass/tippfuchs-openssh.git
+    revision: 6f84c5197ae1c9cd7073dc9c75b0fc8dcc9700ae
   tippfuchs-postgresql
     git: git://github.com/emrass/tippfuchs-postgresql.git
-    revision: 17885fa08acac3fa18eccc9c9754ce9ac444b905
+    revision: 3c641501b483cdeb61f1f5bfef02e3ded259d0ca
   tippfuchs-rails
     git: git://github.com/emrass/tippfuchs-rails.git
     revision: df5fdb65d6853d98086050f25ece190d6d82fc79
 
 GRAPH
-  apt (2.3.8)
+  apt (2.3.10)
   bluepill (2.3.1)
     rsyslog (>= 0.0.0)
   build-essential (2.0.0)
@@ -38,7 +41,8 @@ GRAPH
   fail2ban (2.1.3)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
-  git (4.0.0)
+  firewall (0.11.6)
+  git (4.0.2)
     build-essential (>= 0.0.0)
     dmg (>= 0.0.0)
     runit (>= 1.0.0)
@@ -46,6 +50,7 @@ GRAPH
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
   imagemagick (0.2.3)
+  iptables (0.13.2)
   java (1.22.0)
   locale (1.0.1)
   nginx (2.6.2)
@@ -60,6 +65,8 @@ GRAPH
     build-essential (>= 0.0.0)
     yum (>= 0.0.0)
   ohai (1.1.12)
+  openssh (1.3.4)
+    iptables (>= 0.0.0)
   openssl (1.1.0)
   postgresql (3.3.4)
     apt (>= 0.0.0)
@@ -74,32 +81,40 @@ GRAPH
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
+  sudo (2.5.2)
   timezone-ii (0.2.0)
-  tippfuchs (0.5.0)
+  tippfuchs (0.5.3)
     apt (~> 2.3.0)
     build-essential (~> 2.0.0)
     curl (~> 1.1.0)
+    firewall (~> 0.11.6)
     git (~> 4.0.0)
     imagemagick (~> 0.2.0)
     locale (>= 0.0.0)
     openssl (~> 1.1.0)
+    sudo (~> 2.5.2)
     timezone-ii (~> 0.2.0)
     tippfuchs-fail2ban (>= 0.0.0)
     tippfuchs-nginx (>= 0.0.0)
+    tippfuchs-openssh (>= 0.0.0)
     tippfuchs-postgresql (>= 0.0.0)
     tippfuchs-rails (>= 0.0.0)
+    users (~> 1.7.0)
     vim (~> 1.1.0)
   tippfuchs-fail2ban (0.1.7)
     fail2ban (~> 2.1.0)
   tippfuchs-nginx (1.0.10)
     nginx (~> 2.6.0)
     tippfuchs-fail2ban (~> 0.1.0)
-  tippfuchs-postgresql (1.0.4)
+  tippfuchs-openssh (1.0.3)
+    openssh (~> 1.3.0)
+  tippfuchs-postgresql (1.0.6)
     postgresql (~> 3.3.0)
   tippfuchs-rails (0.2.5)
     nodejs (~> 1.3.0)
     rbenv (~> 0.7.0)
     ruby_build (~> 0.8.0)
+  users (1.7.0)
   vim (1.1.2)
   windows (1.30.2)
     chef_handler (>= 0.0.0)

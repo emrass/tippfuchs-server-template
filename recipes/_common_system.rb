@@ -7,14 +7,25 @@ include_recipe 'locale'
 include_recipe 'timezone-ii'
 
 # security
-include_recipe 'tippfuchs-fail2ban'
+include_recipe 'tippfuchs-openssh' # lock down ssh
 
+include_recipe 'tippfuchs-fail2ban'
 fail2ban_jail 'ssh' do
   jail :enabled  => 'true',
        :port     => 'ssh',
        :filter   => 'sshd',
        :logpath  => node['fail2ban']['auth_log'],
        :maxretry => '6'
+end
+
+# lock down ports
+include_recipe 'firewall'
+firewall 'ufw' do
+  action   :enable
+end
+firewall_rule 'ssh' do
+  port     node['openssh']['server']['port'].to_i
+  action   :allow
 end
 
 
@@ -35,25 +46,9 @@ package 'curl'
 
 
 
-
-# Prepared:
-#
-#include_recipe 'firewall'
-#firewall 'ufw' do
-#  action   :enable
-#end
-#firewall_rule 'ssh' do
-#  port     22
-#  action   :allow
-#end
-#
-#include_recipe 'tippfuchs-openssh'
-
-
 # Todo:
 #
 # - Unattended upgrades (community cookbook currently hardcodes Ubuntu Lucid repo - not yet suitable)
-# - Admin user
 # - Monit
 
 

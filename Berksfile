@@ -15,6 +15,7 @@ cookbook 'rbenv',                '~> 0.7.0', github: 'fnichol/chef-rbenv'       
 # General Dependencies (Common System)
 
 cookbook 'locale',               '~> 1.0.1', github: 'hw-cookbooks/locale'
+cookbook 'tippfuchs-openssh',    '~> 1.0.3', github: 'emrass/tippfuchs-openssh'
 cookbook 'tippfuchs-fail2ban',   '~> 0.1.0', github: 'emrass/tippfuchs-fail2ban'
 
 # Database
