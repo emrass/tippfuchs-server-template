@@ -1,6 +1,9 @@
 .project
 
 .vagrant
+.chef
+.berkshelf
+.kitchen
 *~
 *#
 .#*
