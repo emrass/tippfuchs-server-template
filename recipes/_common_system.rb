@@ -34,7 +34,7 @@ end
 # Searches data bag "users" for groups attribute "sysadmin" and
 # places returned users in Unix group "sysadmin"
 include_recipe 'users::sysadmins'
-# Make sysamdin a sudo group
+# Make sysadmin a sudo group
 include_recipe 'sudo'
 
 
