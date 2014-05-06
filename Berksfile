@@ -18,6 +18,10 @@ cookbook 'locale',               '~> 1.0.1', github: 'hw-cookbooks/locale'
 cookbook 'tippfuchs-openssh',    '~> 1.0.3', github: 'emrass/tippfuchs-openssh'
 cookbook 'tippfuchs-fail2ban',   '~> 0.1.0', github: 'emrass/tippfuchs-fail2ban'
 
+# Cache
+
+cookbook 'tippfuchs-redis',      '~> 1.0.0', github: 'emrass/tippfuchs-redis'
+
 # Database
 
 cookbook 'tippfuchs-postgresql', '~> 1.0.0', github: 'emrass/tippfuchs-postgresql'
