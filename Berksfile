@@ -10,7 +10,7 @@ cookbook 'chef-solo-search'
 # so we need to explicitly declare them.
 
 cookbook 'fail2ban',             '~> 2.1.0', github: 'emrass/fail2ban', branch: 'jail_def' # defined in tippfuchs-fail2ban: remove when merged into main repo
-cookbook 'rbenv',                '~> 0.7.0', github: 'fnichol/chef-rbenv'                  # defined in tippfuchs-rails
+cookbook 'rbenv',                '~> 0.7.3', github: 'fnichol/chef-rbenv'                  # defined in tippfuchs-rails
 
 # General Dependencies (Common System)
 

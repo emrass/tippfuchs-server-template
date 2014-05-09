@@ -24,19 +24,22 @@ DEPENDENCIES
     revision: 6f84c5197ae1c9cd7073dc9c75b0fc8dcc9700ae
   tippfuchs-postgresql
     git: git://github.com/emrass/tippfuchs-postgresql.git
-    revision: 3c641501b483cdeb61f1f5bfef02e3ded259d0ca
+    revision: 016d8970d8141a4561e602e25321a66045f0919b
   tippfuchs-rails
     git: git://github.com/emrass/tippfuchs-rails.git
     revision: df5fdb65d6853d98086050f25ece190d6d82fc79
+  tippfuchs-redis
+    git: git://github.com/emrass/tippfuchs-redis.git
+    revision: cdbe7e5241b64963efbfe7a3db73232c95c1d0c0
 
 GRAPH
   apt (2.3.10)
   bluepill (2.3.1)
     rsyslog (>= 0.0.0)
-  build-essential (2.0.0)
+  build-essential (2.0.2)
   chef-solo-search (0.5.1)
   chef_handler (1.1.6)
-  curl (1.1.0)
+  curl (2.0.0)
   dmg (2.2.0)
   fail2ban (2.1.3)
     yum (~> 3.0)
@@ -68,13 +71,15 @@ GRAPH
   openssh (1.3.4)
     iptables (>= 0.0.0)
   openssl (1.1.0)
-  postgresql (3.3.4)
-    apt (>= 0.0.0)
+  postgresql (3.4.0)
+    apt (>= 1.9.0)
     build-essential (>= 0.0.0)
     openssl (>= 0.0.0)
   rbenv (0.7.3)
     java (> 1.4.0)
     ruby_build (>= 0.0.0)
+  redisio (1.7.1)
+    ulimit (>= 0.1.2)
   rsyslog (1.12.2)
   ruby_build (0.8.0)
   runit (1.5.10)
@@ -83,10 +88,10 @@ GRAPH
     yum-epel (>= 0.0.0)
   sudo (2.5.2)
   timezone-ii (0.2.0)
-  tippfuchs (0.5.3)
+  tippfuchs (0.5.5)
     apt (~> 2.3.0)
     build-essential (~> 2.0.0)
-    curl (~> 1.1.0)
+    curl (~> 2.0.0)
     firewall (~> 0.11.6)
     git (~> 4.0.0)
     imagemagick (~> 0.2.0)
@@ -99,6 +104,7 @@ GRAPH
     tippfuchs-openssh (>= 0.0.0)
     tippfuchs-postgresql (>= 0.0.0)
     tippfuchs-rails (>= 0.0.0)
+    tippfuchs-redis (>= 0.0.0)
     users (~> 1.7.0)
     vim (~> 1.1.0)
   tippfuchs-fail2ban (0.1.7)
@@ -108,15 +114,18 @@ GRAPH
     tippfuchs-fail2ban (~> 0.1.0)
   tippfuchs-openssh (1.0.3)
     openssh (~> 1.3.0)
-  tippfuchs-postgresql (1.0.6)
-    postgresql (~> 3.3.0)
+  tippfuchs-postgresql (1.0.7)
+    postgresql (~> 3.4.0)
   tippfuchs-rails (0.2.5)
     nodejs (~> 1.3.0)
     rbenv (~> 0.7.0)
     ruby_build (~> 0.8.0)
+  tippfuchs-redis (1.0.0)
+    redisio (~> 1.7.1)
+  ulimit (0.3.2)
   users (1.7.0)
   vim (1.1.2)
-  windows (1.30.2)
+  windows (1.31.0)
     chef_handler (>= 0.0.0)
   yum (3.2.0)
   yum-epel (0.3.6)
