@@ -24,7 +24,7 @@ cookbook 'tippfuchs-redis',      '~> 1.0.0', github: 'emrass/tippfuchs-redis'
 
 # Database
 
-cookbook 'tippfuchs-postgresql', '~> 1.0.8', github: 'emrass/tippfuchs-postgresql'
+cookbook 'tippfuchs-postgresql', '~> 1.0.9', github: 'emrass/tippfuchs-postgresql'
 
 # Webserver
 
