@@ -24,10 +24,10 @@ DEPENDENCIES
     revision: 6f84c5197ae1c9cd7073dc9c75b0fc8dcc9700ae
   tippfuchs-postgresql
     git: git://github.com/emrass/tippfuchs-postgresql.git
-    revision: 016d8970d8141a4561e602e25321a66045f0919b
+    revision: 17aaa27081a3f349185fbfc0ae02489ae3a17bc1
   tippfuchs-rails
     git: git://github.com/emrass/tippfuchs-rails.git
-    revision: df5fdb65d6853d98086050f25ece190d6d82fc79
+    revision: c419ff501d237a899a5b04215c7001214cefc329
   tippfuchs-redis
     git: git://github.com/emrass/tippfuchs-redis.git
     revision: cdbe7e5241b64963efbfe7a3db73232c95c1d0c0
@@ -88,7 +88,7 @@ GRAPH
     yum-epel (>= 0.0.0)
   sudo (2.5.2)
   timezone-ii (0.2.0)
-  tippfuchs (0.5.5)
+  tippfuchs (0.5.6)
     apt (~> 2.3.0)
     build-essential (~> 2.0.0)
     curl (~> 2.0.0)
@@ -114,9 +114,9 @@ GRAPH
     tippfuchs-fail2ban (~> 0.1.0)
   tippfuchs-openssh (1.0.3)
     openssh (~> 1.3.0)
-  tippfuchs-postgresql (1.0.7)
+  tippfuchs-postgresql (1.0.8)
     postgresql (~> 3.4.0)
-  tippfuchs-rails (0.2.5)
+  tippfuchs-rails (0.2.6)
     nodejs (~> 1.3.0)
     rbenv (~> 0.7.0)
     ruby_build (~> 0.8.0)

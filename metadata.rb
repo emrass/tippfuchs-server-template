@@ -4,7 +4,7 @@ maintainer_email 'enrico.mrass@gmail.com'
 license          'Proprietary - All Rights Reserved'
 description      'Installs/Configures tippfuchs'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.5.6'
+version          '0.5.7'
 
 recipe 'tippfuchs::_common_system', 'For internal use only - the base server'
 recipe 'tippfuchs::database',       'Postgres database server'
