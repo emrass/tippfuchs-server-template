@@ -24,7 +24,7 @@ DEPENDENCIES
     revision: 6f84c5197ae1c9cd7073dc9c75b0fc8dcc9700ae
   tippfuchs-postgresql
     git: git://github.com/emrass/tippfuchs-postgresql.git
-    revision: 17aaa27081a3f349185fbfc0ae02489ae3a17bc1
+    revision: cda3be557ff9acc41a8c797e1943447f164ad3dc
   tippfuchs-rails
     git: git://github.com/emrass/tippfuchs-rails.git
     revision: c419ff501d237a899a5b04215c7001214cefc329
@@ -88,7 +88,7 @@ GRAPH
     yum-epel (>= 0.0.0)
   sudo (2.5.2)
   timezone-ii (0.2.0)
-  tippfuchs (0.5.6)
+  tippfuchs (0.5.7)
     apt (~> 2.3.0)
     build-essential (~> 2.0.0)
     curl (~> 2.0.0)
@@ -114,7 +114,7 @@ GRAPH
     tippfuchs-fail2ban (~> 0.1.0)
   tippfuchs-openssh (1.0.3)
     openssh (~> 1.3.0)
-  tippfuchs-postgresql (1.0.8)
+  tippfuchs-postgresql (1.0.9)
     postgresql (~> 3.4.0)
   tippfuchs-rails (0.2.6)
     nodejs (~> 1.3.0)
